@@ -1,0 +1,775 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://cloudcmd.io"
+
+    >console-io (v3.0.11)</a>
+</h1>
+<h4>Web console</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.console-io">module console-io</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.console-io">
+            function <span class="apidocSignatureSpan"></span>console-io
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.index">
+            function <span class="apidocSignatureSpan">console-io.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.listen">
+            function <span class="apidocSignatureSpan">console-io.</span>listen
+            <span class="apidocSignatureSpan">(socket, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load">
+            function <span class="apidocSignatureSpan">console-io.</span>load
+            <span class="apidocSignatureSpan">(src, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">console-io.</span>console</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.console-io.console">module console-io.console</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.console.Console">
+            function <span class="apidocSignatureSpan">console-io.console.</span>Console
+            <span class="apidocSignatureSpan">(element, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.console-io.index">module console-io.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.index.index">
+            function <span class="apidocSignatureSpan">console-io.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.index.listen">
+            function <span class="apidocSignatureSpan">console-io.index.</span>listen
+            <span class="apidocSignatureSpan">(socket, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.console-io.load">module console-io.load</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.load">
+            function <span class="apidocSignatureSpan">console-io.</span>load
+            <span class="apidocSignatureSpan">(src, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.ajax">
+            function <span class="apidocSignatureSpan">console-io.load.</span>ajax
+            <span class="apidocSignatureSpan">(url, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.css">
+            function <span class="apidocSignatureSpan">console-io.load.</span>css
+            <span class="apidocSignatureSpan">(src, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.js">
+            function <span class="apidocSignatureSpan">console-io.load.</span>js
+            <span class="apidocSignatureSpan">(src, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.json">
+            function <span class="apidocSignatureSpan">console-io.load.</span>json
+            <span class="apidocSignatureSpan">(url , callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.parallel">
+            function <span class="apidocSignatureSpan">console-io.load.</span>parallel
+            <span class="apidocSignatureSpan">(urls, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.console-io.load.series">
+            function <span class="apidocSignatureSpan">console-io.load.</span>series
+            <span class="apidocSignatureSpan">(urls, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.console-io" id="apidoc.module.console-io">module console-io</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.console-io" id="apidoc.element.console-io.console-io">
+        function <span class="apidocSignatureSpan"></span>console-io
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options = {}) =&#x3e; {
+    const router = Router();
+    const prefix = options.prefix || &#x27;/console&#x27;;
+
+    router.route(prefix + &#x27;/*&#x27;)
+        .get(konsoleFn(options))
+        .get(modulesFn(prefix, options))
+        .get(joinFn(options))
+        .get(minifyFn(options))
+        .get(staticFn)
+
+    return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.index" id="apidoc.element.console-io.index">
+        function <span class="apidocSignatureSpan">console-io.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+    var options = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
+
+    var router = Router();
+    var prefix = options.prefix || &#x27;/console&#x27;;
+
+    router.route(prefix + &#x27;/*&#x27;).get(konsoleFn(options)).get(modulesFn(prefix, options)).get(joinFn(options)).get(minifyFn(options
+)).get(staticFn);
+
+    return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.listen" id="apidoc.element.console-io.listen">
+        function <span class="apidocSignatureSpan">console-io.</span>listen
+        <span class="apidocSignatureSpan">(socket, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(socket, options) =&#x3e; {
+    if (!options) {
+        options = socket;
+        socket = null
+    }
+
+    const o = options;
+
+    if (!options.prefix)
+        options.prefix = &#x27;/console&#x27;;
+
+    return Console(socket, {
+        server: o.server,
+        prefix: o.prefix,
+        prompt: o.prompt,
+        execute: o.execute || execute,
+        authCheck: o.authCheck
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- (console) revert changes to jqconsole
+- (console) add break words for firefox
+
+
+2014.09.16, v1.7.7
+
+fix:
+- (console) io.<span class="apidocCodeKeywordSpan">listen</span>(o.server).sockets -&#x3e; io.listen(o.server)
+
+
+2014.09.12, v1.7.6
+
+feature:
+- (socket) rm
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load" id="apidoc.element.console-io.load">
+        function <span class="apidocSignatureSpan">console-io.</span>load
+        <span class="apidocSignatureSpan">(src, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(src, callback) {
+    var ext = getExt(src);
+
+    switch (ext) {
+    case &#x27;.js&#x27;:
+        load.js(src, callback);
+        break;
+
+    case &#x27;.css&#x27;:
+        load.css(src, callback);
+        break;
+
+    case &#x27;.json&#x27;:
+        load.json(src, callback);
+        break;
+
+    default:
+        load.ajax(src, callback);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.console-io.console" id="apidoc.module.console-io.console">module console-io.console</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.console.Console" id="apidoc.element.console-io.console.Console">
+        function <span class="apidocSignatureSpan">console-io.console.</span>Console
+        <span class="apidocSignatureSpan">(element, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Console(element, options, callback) {
+    var el = getElement(element);
+
+    if (!callback) {
+        callback = options;
+        options = {};
+    }
+
+    var socketPath = options.socketPath || &#x27;&#x27;;
+    var prefix = options.prefix || &#x27;/console&#x27;;
+    var env = options.env || {};
+
+    load(prefix, function() {
+        jqconsole = $(el).jqconsole(&#x27;&#x27;, &#x27;&#x3e; &#x27;);
+
+        Spawn = SpawnProto(jqconsole, {
+            env: env,
+            prefix: prefix,
+            socketPath: socketPath,
+        });
+
+        addShortCuts(jqconsole);
+        addKeyWhenNoPrompt(jqconsole);
+        addOnMouseUp(jqconsole);
+
+        if (typeof callback === &#x27;function&#x27;)
+            callback(Spawn);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.console-io.index" id="apidoc.module.console-io.index">module console-io.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.index.index" id="apidoc.element.console-io.index.index">
+        function <span class="apidocSignatureSpan">console-io.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+    var options = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
+
+    var router = Router();
+    var prefix = options.prefix || &#x27;/console&#x27;;
+
+    router.route(prefix + &#x27;/*&#x27;).get(konsoleFn(options)).get(modulesFn(prefix, options)).get(joinFn(options)).get(minifyFn(options
+)).get(staticFn);
+
+    return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.index.listen" id="apidoc.element.console-io.index.listen">
+        function <span class="apidocSignatureSpan">console-io.index.</span>listen
+        <span class="apidocSignatureSpan">(socket, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listen = function (socket, options) {
+    if (!options) {
+        options = socket;
+        socket = null;
+    }
+
+    var o = options;
+
+    if (!options.prefix) options.prefix = &#x27;/console&#x27;;
+
+    return Console(socket, {
+        server: o.server,
+        prefix: o.prefix,
+        prompt: o.prompt,
+        execute: o.execute || execute,
+        authCheck: o.authCheck
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- (console) revert changes to jqconsole
+- (console) add break words for firefox
+
+
+2014.09.16, v1.7.7
+
+fix:
+- (console) io.<span class="apidocCodeKeywordSpan">listen</span>(o.server).sockets -&#x3e; io.listen(o.server)
+
+
+2014.09.12, v1.7.6
+
+feature:
+- (socket) rm
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.console-io.load" id="apidoc.module.console-io.load">module console-io.load</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.load" id="apidoc.element.console-io.load.load">
+        function <span class="apidocSignatureSpan">console-io.</span>load
+        <span class="apidocSignatureSpan">(src, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(src, callback) {
+    var ext = getExt(src);
+
+    switch (ext) {
+    case &#x27;.js&#x27;:
+        load.js(src, callback);
+        break;
+
+    case &#x27;.css&#x27;:
+        load.css(src, callback);
+        break;
+
+    case &#x27;.json&#x27;:
+        load.json(src, callback);
+        break;
+
+    default:
+        load.ajax(src, callback);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.ajax" id="apidoc.element.console-io.load.ajax">
+        function <span class="apidocSignatureSpan">console-io.load.</span>ajax
+        <span class="apidocSignatureSpan">(url, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ajax = function (url, callback) {
+    var request = new XMLHttpRequest();
+
+    request.open(&#x27;GET&#x27;, url, true);
+
+    request.addEventListener(&#x27;load&#x27;, function() {
+        var data;
+
+        if (request.status &#x3e;= 200 &#x26;&#x26; request.status &#x3c; 400){
+            data = request.responseText;
+            callback(null, data);
+        }
+    });
+
+    request.addEventListener(&#x27;error&#x27;, callback);
+
+    request.send();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        break;
+
+    case &#x27;.json&#x27;:
+        load.json(src, callback);
+        break;
+
+    default:
+        load.<span class="apidocCodeKeywordSpan">ajax</span>(src, callback);
+    }
+}
+
+load.js     = function(src, callback) {
+    var id  = getIdBySrc(src),
+        el  = document.getElementById(id);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.css" id="apidoc.element.console-io.load.css">
+        function <span class="apidocSignatureSpan">console-io.load.</span>css
+        <span class="apidocSignatureSpan">(src, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">css = function (src, callback) {
+    var id  = getIdBySrc(src),
+        el  = document.getElementById(id);
+
+    if (el) {
+        callback();
+    } else {
+        el      = document.createElement(&#x27;link&#x27;);
+        el.id   = getIdBySrc(src);
+        el.rel  = &#x27;stylesheet&#x27;;
+        el.href = src;
+
+        el.addEventListener(&#x27;load&#x27;, function(event) {
+            callback(null, event);
+        });
+
+        el.addEventListener(&#x27;error&#x27;, callback);
+
+        document.head.appendChild(el);
+    }
+
+    return el;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+   * __(string|Element)__ *node*: The DOM Element or html string to append to
+     the console just before the prompt.
+
+   Example:
+
+// Add a div with the text &#x27;hello&#x27; on a red background using jquery
+jqconsole.Append($(&#x27;&#x3c;div&#x3e;hello&#x3c;/div&#x3e;&#x27;).<span class="apidocCodeKeywordSpan">css</span>(&#x27;background
+-color&#x27;, &#x27;red&#x27;));
+
+// We can also use document.createElement
+node = document.createElement(&#x22;div&#x22;);
+content = document.createTextNode(&#x22;hello&#x22;);
+node.appendChild(content);
+jqconsole.Append(node);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.js" id="apidoc.element.console-io.load.js">
+        function <span class="apidocSignatureSpan">console-io.load.</span>js
+        <span class="apidocSignatureSpan">(src, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js = function (src, callback) {
+    var id  = getIdBySrc(src),
+        el  = document.getElementById(id);
+
+    if (el) {
+        callback();
+    } else {
+        el      = document.createElement(&#x27;script&#x27;);
+        el.id   = id;
+        el.src  = src;
+
+        el.addEventListener(&#x27;load&#x27;, function(event) {
+            callback(null, event);
+        });
+
+        el.addEventListener(&#x27;error&#x27;, callback);
+
+        document.body.appendChild(el);
+    }
+
+    return el;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    function LoadProto() {
+function load(src, callback) {
+    var ext = getExt(src);
+
+    switch (ext) {
+    case &#x27;.js&#x27;:
+        load.<span class="apidocCodeKeywordSpan">js</span>(src, callback);
+        break;
+
+    case &#x27;.css&#x27;:
+        load.css(src, callback);
+        break;
+
+    case &#x27;.json&#x27;:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.json" id="apidoc.element.console-io.load.json">
+        function <span class="apidocSignatureSpan">console-io.load.</span>json
+        <span class="apidocSignatureSpan">(url , callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function (url , callback) {
+    load.ajax(url, function(error, data) {
+        var json;
+
+        if (!error)
+            json = JSON.parse(data);
+
+        callback(error, json);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    join    = window.join,
+
+    css     = prefix + join([
+        &#x27;/css/console.css&#x27;,
+        &#x27;/css/ansi.css&#x27;,
+    ]);
+
+load.<span class="apidocCodeKeywordSpan">json</span>(prefix + &#x27;/modules.json&#x27;, function(error, remote) {
+    var names = [
+        &#x27;jQuery&#x27;,
+        &#x27;io&#x27;
+    ];
+
+    if (error) {
+        /*eslint no-console: 0*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.parallel" id="apidoc.element.console-io.load.parallel">
+        function <span class="apidocSignatureSpan">console-io.load.</span>parallel
+        <span class="apidocSignatureSpan">(urls, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parallel = function (urls, callback) {
+    var i       = urls.length,
+        done,
+        func    = function(error) {
+            --i;
+
+            if (!i &#x26;&#x26; !done || error) {
+                done = true;
+                callback(error);
+            }
+        };
+
+    urls.forEach(function(url) {
+        load(url, func);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+load.series([
+    &#x27;jquery.js&#x27;,
+    &#x27;jq-console.js&#x27;,
+], function(error) {
+});
+
+/* load all together and call callback */
+load.<span class="apidocCodeKeywordSpan">parallel</span>([
+    &#x27;menu.css&#x27;,
+    &#x27;menu.js&#x27;,
+], function(error) {
+});
+```
+
+## License
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.console-io.load.series" id="apidoc.element.console-io.load.series">
+        function <span class="apidocSignatureSpan">console-io.load.</span>series
+        <span class="apidocSignatureSpan">(urls, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">series = function (urls, callback) {
+    var url = urls.shift();
+
+    if (!url)
+        callback();
+    else
+        load(url, function(error) {
+            if (error)
+                callback(error);
+            else
+                load.series(urls, callback);
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+                    var reg = RegExp(name, &#x27;i&#x27;);
+                    remote  = remote.filter(function(item) {
+                        return !reg.test(item);
+                    });
+                });
+
+                load.<span class="apidocCodeKeywordSpan">series</span>(remote.concat(css), callback);
+            }
+        });
+    }
+}
+
+function loadScript(srcs, callback) {
+    var i       = srcs.length,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
